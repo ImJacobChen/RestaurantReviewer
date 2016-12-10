@@ -5,7 +5,7 @@
 			<div id="refineBar">
 				<div id="searchRefineContainer">
 					<label for="searchRefine"><img src="images/search-icon.png" alt="search-icon"> Search by restaurant name</label>
-					<input id="searchRefine" type="text" name="searchRefine">
+					{{input type="text" id="searchRefine" value=searchRefine}}
 				</div>
 				
 				<div id="refineToggleContainer" class="is-pulled-right">
@@ -32,11 +32,11 @@
 					</label>
 				{{/each}}
 
-			    <div class="panel-block">
+			    <!--div class="panel-block">
 				    <button {{action "resetCheckboxes"}} class="button is-primary is-outlined is-fullwidth">
 				      Reset all filters
 				    </button>
-			    </div>
+			    </div-->
 			</div>
 		</div>
 
