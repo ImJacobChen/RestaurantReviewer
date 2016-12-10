@@ -1,0 +1,94 @@
+<h1 class="title is-1" tabindex="0">Reviews</h1>
+
+{{! User review form}}
+<div class="section user-review">
+	<h1 class="title is-4" tabindex="0">Leave a review</h1>
+	<form {{action "postReview" restaurant.id on="submit"}}>
+		<div class="level">
+			<div class="level-item">
+				<label for="review-name">Name:</label><br>
+				{{input id="reviewName" title="your name" type="text" value=reviewName}}
+			</div>
+			<div class="level-item">
+				<label for="review-body">Review:</label><br>
+				{{textarea value=reviewBody title="your review" rows="2" id="review-body"}}
+			</div>
+			<div class="level-item">
+				<label for="star-rating">Star Rating:</label>
+				<fieldset id="star-rating" title="Your rating out of 5 stars" class="star-rating">
+					
+					{{radio-button
+					  name="star-rating"
+					  value="5"
+					  radioId="star-rating-5"
+					  groupValue=reviewRating
+					  tabindex=0
+					  }}
+					<label for="star-rating-5" title="5 stars">5 Stars</label>
+					
+			        {{radio-button
+					  name="star-rating"
+					  value="4"
+					  radioId="star-rating-4"
+					  groupValue=reviewRating
+					  tabindex=0
+					  }}
+					<label for="star-rating-4" title="4 stars">4 Stars</label>				
+					
+			        {{radio-button
+					  name="star-rating"
+					  value="3"
+					  radioId="star-rating-3"
+					  groupValue=reviewRating
+					  tabindex=0
+					  }}
+					<label for="star-rating-3" title="3 stars">3 Stars</label>			
+					
+			        {{radio-button
+					  name="star-rating"
+					  value="2"
+					  radioId="star-rating-2"
+					  groupValue=reviewRating
+					  tabindex=0
+					  }}
+					<label for="star-rating-2" title="2 stars">2 Stars</label>			
+					
+			        {{radio-button
+					  name="star-rating"
+					  value="1"
+					  radioId="star-rating-1"
+					  groupValue=reviewRating
+					  tabindex=0
+					  }}
+					<label for="star-rating-1" title="1 stars">1 Star</label>
+				</fieldset>
+			</div>
+			<div class="level-item">
+				<button type="submit">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>
+{{! End user review form}}
+
+<div class="section">
+	{{#each restaurant.reviews as |review|}}
+		<div class="media" tabindex="0">
+			<div class="media-left">
+				<h1 class="title is-3"><strong>{{review.name}}</strong></h1>
+				<p class="subtitle">"{{review.body}}"</p>
+			</div>
+
+			<div class="media-content">
+				
+			</div>
+				
+			<div class="media-right">
+				{{generate-stars review.rating}}
+				{{timestamp-to-date review.timestamp}}
+			</div>
+		</div>
+	{{/each}}
+</div>
+
+{{yield}}

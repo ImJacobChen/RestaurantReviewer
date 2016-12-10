@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+      apiKey: "AIzaSyA7QGooXvH3cmmyV6wkZG0QSuOF4E9L3xo",
+      authDomain: "blinding-fire-167.firebaseapp.com",
+      databaseURL: "https://blinding-fire-167.firebaseio.com",
+      storageBucket: "blinding-fire-167.appspot.com",
+    },
     modulePrefix: 'restaurant-reviewer',
     environment: environment,
     baseURL: '/',
@@ -12,7 +18,6 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

@@ -1,0 +1,40 @@
+<div id="breadcrumbs" class="section">
+	<div class="container">
+		<span>{{#link-to "index"}}Home{{/link-to}}</span>
+		<span>></span>
+		<span>{{model.name}}</span>
+	</div>
+</div>
+
+<section class="section">
+	<div class="container">
+		<h1 class="title is-1" tabindex="0">
+			{{model.name}}
+		</h1>
+		{{generate-stars model.stars}}<br><br>	
+
+		<div class="columns">
+			<div class="column">
+				<img class="image is-128x128" src="{{model.image}}" />
+			</div>
+			<div class="column" tabindex="0">
+				<h3 class="title is-3">Address</h3>
+				{{{model.address}}}
+			</div>
+			<div class="column" tabindex="0">
+				<h3 class="title is-3">Opening Times</h3>
+				{{#each model.openingtimes as |time|}}
+					{{time}}<br>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section reviews">
+	<div class="container">
+		{{#restaurant-reviews restaurant=model}}
+		{{/restaurant-reviews}}
+	</div>
+</section>
+{{outlet}}

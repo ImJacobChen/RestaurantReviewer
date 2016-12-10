@@ -1,0 +1,49 @@
+{
+	"restaurants": {
+		"rumbles_fish_bar": {	
+			"id": "rumbles_fish_bar",
+			"name": "Rumbles Fish Bar",
+		    "stars": 3,
+		    "type": "fishery",
+		    "openingtimes": [
+		    	"Monday 9-5",
+		    	"Tuesday 9-5",
+		    	"Wednesday 9-5",
+		    	"Thursday 9-5",
+		    	"Friday 9-5",
+		    	"Saturday 9-5",
+		    	"Sunday 9-5"
+		    ],
+		    "reviews": {
+		    	"rumbles_fish_bar_reviews": true
+		    },
+		    "address": "1 Star Street<br>Street 5<br>RM12 4LH",
+		    "description": "A small and local fishery located in the beautiful town of Hornchurch.",
+		    "image": "/images/rumbles.jpg"
+		},
+		"teriyaki_surprise": {
+			"id": "teriyaki_surprise",
+			"name": "Teriyaki Surprise",
+			"stars": 1,
+			"type": "indian",
+			"openingtimes": [
+		    	"Monday 9-5",
+		    	"Tuesday 9-5",
+		    	"Wednesday 9-5",
+		    	"Thursday 9-5",
+		    	"Friday 9-5",
+		    	"Saturday 9-5",
+		    	"Sunday 9-5"
+		    ],
+		    "reviews": {
+		    	"teriyaki_surprise_reviews": true
+		    },
+			"address": "62 Star Street<br>Street 9<br>RM17 4PQ",
+			"description": "A small and local indian cuisine located in downtown surpriseville.",
+			"image": "/images/bengali-surprise.jpg"
+		}
+	},
+	"reviews": {
+    	
+	}
+}

@@ -1,0 +1,165 @@
+/************
+* APP 
+************/
+/**
+ * Header
+ */
+#header {
+    padding: 12px 3px;
+    background-color: #ffdd57;
+    width: 100%;
+}
+#main-title {
+    color: rgba(250, 0, 41, 0.8);
+}
+
+/**
+ * Sub-header
+ */
+#sub-header {
+    height: 60px;
+    background-color: #ffdd57;
+    width: 100%;
+}
+
+/**
+ * Restaurant List
+ */
+@media screen and (max-width: 768px) {
+  #panel {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #refineToggleContainer {
+    display: none !important;
+  }
+  #searchRefineContainer {
+    width: 100% !important;
+  }
+  #searchRefine {
+    margin: 0 !important;
+  }
+}
+
+#refineBar {
+  margin-top: 5px; 
+  padding: 3px 10px;
+}
+#refineBar div {
+  display: inline-block;
+}
+
+#searchRefineContainer {
+  width: 67%; 
+}
+
+#refineToggleContainer {
+  text-align: right;
+  width: 32%;
+}
+
+#searchRefineContainer label,
+#searchRefineContainer input,
+#refineToggleContainer label,
+#refineToggleContainer button {
+  display: block;
+}
+
+#panel {
+    margin: 5px;
+    background-color: white;
+}
+.panel-active {
+  display: block !important;
+}
+
+#searchRefine {
+  margin: 3px;
+  padding: 0 16px;
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid lightgrey;
+  width: 100%;
+}
+#refineToggle {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+  margin: 3px;
+  border-radius: 2px;
+  background-image: url(../images/refine-icon.png);
+  border: 1px solid black;
+}
+.restaurantListItem {
+    margin: 5px 0;
+}
+
+/************
+* Restaurant
+************/
+#breadcrumbs {
+    padding: 5px;
+    font-size: 18px;
+    background-color: #ffdd57;
+}
+#breadcrumbs span {
+    margin: 5px;
+}
+
+/**
+ * Reviews
+ */
+#reviewName {
+    height: 36px;
+}
+
+/**
+ * Star Rating
+ */
+.star-rating {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 60px;
+  padding: 0;
+  border: none;
+}
+
+.star-rating > input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0;
+}
+
+.star-rating > input:checked ~ label,
+.star-rating > input:focus ~ label {
+  background-position: 0 -30px;
+}
+
+.star-rating > input:hover ~ label {
+  background-position: 0 -30px;
+}
+
+.star-rating > input:focus + label {
+  outline: 1px dotted #999;
+}
+
+.star-rating > label {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  cursor: pointer;
+  background-image: url("../images/icons.png");
+  background-repeat: no-repeat;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+  .star-rating > label {
+    background-image: url("../images/icons@2x.png");
+    background-size: 30px auto;
+  }
+}

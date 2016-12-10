@@ -1,0 +1,42 @@
+{{#link-to "restaurant" restaurant.id}}
+<div class="media">
+
+  <div class="media-left">
+    <p class="image is-128x128">
+      <img src="{{restaurant.image}}" alt="{{restaurant.name}} image">
+    </p>
+  </div>
+
+  <div class="media-content">
+    <div class="content">
+    	<h3 class="title is-3"><strong>{{restaurant.name}}</strong></h3>
+      	<div class="columns">
+
+      		<div class="column">
+            <h5 class="title is-5">Opening Times</h5>
+            {{#each restaurant.openingtimes as |day|}}
+  	      		{{day}}<br>
+            {{/each}}
+      		</div>
+
+      		<div class="column">
+            <h5 class="title is-5">Address</h5>
+    				{{{restaurant.address}}}
+      		</div>  		
+
+      		<div class="column">
+            <h5 class="title is-5">Description</h5>
+            {{restaurant.description}}
+          </div>
+          
+      	</div>
+    </div>
+  </div>
+
+  <div class="media-right">
+    {{generate-stars restaurant.stars}}
+  </div>
+
+</div>
+{{/link-to}}
+{{yield}}

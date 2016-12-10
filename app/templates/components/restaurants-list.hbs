@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="columns">
+
+		<div class="column">		
+			<div id="refineBar">
+				<div id="searchRefineContainer">
+					<label for="searchRefine"><img src="images/search-icon.png" alt="search-icon"> Search by restaurant name</label>
+					<input id="searchRefine" type="text" name="searchRefine">
+				</div>
+				
+				<div id="refineToggleContainer" class="is-pulled-right">
+					{{#if filterPanelDisplay}}
+						<label for="refineToggle">Hide refine</label>
+					{{else}}
+						<label for="refineToggle">Show refine</label>
+					{{/if}}
+					<button {{action "toggleFilterPanel"}} id="refineToggle" class="is-pulled-right"></button>
+				</div>
+			</div>
+			
+			<div id="panel" class="panel {{if filterPanelDisplay 'panel-active'}}">
+				<h5 class="panel-heading" tabindex="0">Filters</h5>
+				
+				{{#each restaurants as |restaurant|}}
+					<label class="panel-block" for="{{restaurant.type}}">
+						<input type="checkbox" 
+							id="{{restaurant.type}}" 
+							name="{{restaurant.type}}" 
+							value="{{restaurant.type}}" 
+							{{action "filter" restaurant.type on="change"}} >
+					    {{restaurant.type}}
+					</label>
+				{{/each}}
+
+			    <div class="panel-block">
+				    <button {{action "resetCheckboxes"}} class="button is-primary is-outlined is-fullwidth">
+				      Reset all filters
+				    </button>
+			    </div>
+			</div>
+		</div>
+
+		<div class="column is-three-quarters">
+			{{#each filteredRestaurants as |restaurant|}}
+				<section class="section restaurantListItem">
+					<div class="container">
+						{{#restaurant-card restaurant=restaurant}}
+						{{/restaurant-card}}
+					</div>
+				</section>	
+			{{/each}}	
+		</div>
+
+	</div>
+</div>
+{{yield}}
