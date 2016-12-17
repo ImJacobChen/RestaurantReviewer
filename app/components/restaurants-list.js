@@ -27,7 +27,7 @@ export default Ember.Component.extend({
 					return filters.includes(restaurant.data.type);
 				}
 			}).filter(function(restaurant) {
-				if (searchRefine == "") {
+				if (searchRefine === "") {
 					return true;
 				}
 				else {

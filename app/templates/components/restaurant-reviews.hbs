@@ -6,12 +6,12 @@
 	<form {{action "postReview" restaurant.id on="submit"}}>
 		<div class="level">
 			<div class="level-item">
-				<label for="review-name">Name:</label><br>
-				{{input id="reviewName" title="your name" type="text" value=reviewName}}
+				<label for="reviewName">Name:</label><br>
+				{{input id="reviewName" title="your name" type="text" value=reviewName class="input"}}
 			</div>
 			<div class="level-item">
-				<label for="review-body">Review:</label><br>
-				{{textarea value=reviewBody title="your review" rows="2" id="review-body"}}
+				<label for="reviewBody">Review:</label><br>
+				{{textarea value=reviewBody title="your review" rows="2" id="reviewBody" class="input is-danger"}}
 			</div>
 			<div class="level-item">
 				<label for="star-rating">Star Rating:</label>
@@ -64,7 +64,7 @@
 				</fieldset>
 			</div>
 			<div class="level-item">
-				<button type="submit">Submit</button>
+				<button class="button disabled" type="submit">Submit</button>
 			</div>
 		</div>
 	</form>

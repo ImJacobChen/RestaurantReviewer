@@ -113,6 +113,13 @@
 #reviewName {
     height: 36px;
 }
+#reviewName,
+#reviewBody {
+  width: 200px;
+}
+.user-review form .level-item {
+  max-height: 52px;
+}
 
 /**
  * Star Rating
