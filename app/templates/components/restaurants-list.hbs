@@ -1,4 +1,4 @@
-<div class="container">
+<main class="container">
 	<div class="columns">
 
 		<div class="column">		
@@ -31,26 +31,20 @@
 					    {{restaurant.type}}
 					</label>
 				{{/each}}
-
-			    <!--div class="panel-block">
-				    <button {{action "resetCheckboxes"}} class="button is-primary is-outlined is-fullwidth">
-				      Reset all filters
-				    </button>
-			    </div-->
 			</div>
 		</div>
 
 		<div class="column is-three-quarters">
 			{{#each filteredRestaurants as |restaurant|}}
 				<section class="section restaurantListItem">
-					<div class="container">
+					<article class="container">
 						{{#restaurant-card restaurant=restaurant}}
 						{{/restaurant-card}}
-					</div>
+					</article>
 				</section>	
 			{{/each}}	
 		</div>
 
 	</div>
-</div>
+</main>
 {{yield}}

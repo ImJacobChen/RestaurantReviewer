@@ -5,9 +5,7 @@
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
-    "firebase": "^3.0.0"
-  },
-  "devDependencies": {
+    "firebase": "^3.0.0",
     "bulma": "^0.2.3"
   }
 }

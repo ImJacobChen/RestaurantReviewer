@@ -6,11 +6,7 @@
  */
 #header {
     padding: 12px 3px;
-    background-color: #ffdd57;
     width: 100%;
-}
-#main-title {
-    color: rgba(250, 0, 41, 0.8);
 }
 
 /**
@@ -18,7 +14,6 @@
  */
 #sub-header {
     height: 60px;
-    background-color: #ffdd57;
     width: 100%;
 }
 
@@ -28,6 +23,9 @@
 @media screen and (max-width: 768px) {
   #panel {
     display: none;
+  }
+  #header {
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -101,7 +99,6 @@
 #breadcrumbs {
     padding: 5px;
     font-size: 18px;
-    background-color: #ffdd57;
 }
 #breadcrumbs span {
     margin: 5px;

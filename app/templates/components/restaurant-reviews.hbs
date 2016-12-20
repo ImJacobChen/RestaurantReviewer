@@ -1,8 +1,8 @@
-<h1 class="title is-1" tabindex="0">Reviews</h1>
+<h2 class="title is-1" tabindex="0">Reviews</h2>
 
 {{! User review form}}
 <div class="section user-review">
-	<h1 class="title is-4" tabindex="0">Leave a review</h1>
+	<h4 class="title is-4" tabindex="0">Leave a review</h4>
 	<form {{action "postReview" restaurant.id on="submit"}}>
 		<div class="level">
 			<div class="level-item">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="level-item">
 				<label for="reviewBody">Review:</label><br>
-				{{textarea value=reviewBody title="your review" rows="2" id="reviewBody" class="input is-danger"}}
+				{{textarea value=reviewBody title="your review" rows="2" id="reviewBody" class="input"}}
 			</div>
 			<div class="level-item">
 				<label for="star-rating">Star Rating:</label>
