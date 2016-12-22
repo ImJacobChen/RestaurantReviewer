@@ -1,8 +1,8 @@
-<h2 class="title is-1" tabindex="0">Reviews</h2>
+<h2 class="title is-1">Reviews</h2>
 
 {{! User review form}}
 <div class="section user-review">
-	<h4 class="title is-4" tabindex="0">Leave a review</h4>
+	<h4 class="title is-4">Leave a review</h4>
 	<form {{action "postReview" restaurant.id on="submit"}}>
 		<div class="level">
 			<div class="level-item">
@@ -24,7 +24,7 @@
 					  groupValue=reviewRating
 					  tabindex=0
 					  }}
-					<label for="star-rating-5" title="5 stars">5 Stars</label>
+					<label for="star-rating-5" title="5 stars"></label>
 					
 			        {{radio-button
 					  name="star-rating"
@@ -33,7 +33,7 @@
 					  groupValue=reviewRating
 					  tabindex=0
 					  }}
-					<label for="star-rating-4" title="4 stars">4 Stars</label>				
+					<label for="star-rating-4" title="4 stars"></label>				
 					
 			        {{radio-button
 					  name="star-rating"
@@ -42,7 +42,7 @@
 					  groupValue=reviewRating
 					  tabindex=0
 					  }}
-					<label for="star-rating-3" title="3 stars">3 Stars</label>			
+					<label for="star-rating-3" title="3 stars"></label>			
 					
 			        {{radio-button
 					  name="star-rating"
@@ -51,7 +51,7 @@
 					  groupValue=reviewRating
 					  tabindex=0
 					  }}
-					<label for="star-rating-2" title="2 stars">2 Stars</label>			
+					<label for="star-rating-2" title="2 stars"></label>			
 					
 			        {{radio-button
 					  name="star-rating"
@@ -60,7 +60,7 @@
 					  groupValue=reviewRating
 					  tabindex=0
 					  }}
-					<label for="star-rating-1" title="1 stars">1 Star</label>
+					<label for="star-rating-1" title="1 stars"></label>
 				</fieldset>
 			</div>
 			<div class="level-item">
@@ -73,7 +73,7 @@
 
 <div class="section">
 	{{#each restaurant.reviews as |review|}}
-		<div class="media" tabindex="0">
+		<div class="media">
 			<div class="media-left">
 				<h1 class="title is-3"><strong>{{review.name}}</strong></h1>
 				<p class="subtitle">"{{review.body}}"</p>
